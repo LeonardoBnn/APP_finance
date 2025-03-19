@@ -11,7 +11,7 @@ CREATE TABLE Categorie(
     ID INT auto_increment PRIMARY KEY,
     Libelle Varchar(250) NOT NULL,
     Id_limite int,
-    FOREIGN KEY (Id_limite) REFERENCE LIMITE(ID)
+    FOREIGN KEY (Id_limite) REFERENCES LIMITE(ID)
 );
 
 CREATE TABLE Depense(
@@ -20,6 +20,6 @@ CREATE TABLE Depense(
     Date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Commentaire Varchar(500),
     Cat_id int,
-    FOREIGN KEY (Cat_id) REFERENCE CATEGORIE (ID)
+    FOREIGN KEY (Cat_id) REFERENCES CATEGORIE (ID)
 );
 
