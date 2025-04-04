@@ -1,5 +1,4 @@
 <?php INCLUDE("View/Commun/Header.php"); ?>
-
 <br><br><br>
     <h1>Utilisez ce formulaire pour ajouter une dépense.</h1>
     <section id="Form">
@@ -8,10 +7,10 @@
             <br>
             Type de Dépense :
             <select name="Cat_id">
-                <?php INCLUDE("Controller/SelectCat.php")?>
-                <?php foreach($categories as $categorie){?>
-                <option value="<?php echo $categorie['ID'];?>">
-                    <?php echo $categorie['Libelle']; ?>
+                <?php INCLUDE("Controller/SelectLimite.php");?>
+                <?php foreach($limites as $limites){?>
+                <option value="<?php echo $limites['ID'];?>">
+                    <?php echo $limites['Libelle']; ?>
                 </option>
                 <?php }?>
             </select>
